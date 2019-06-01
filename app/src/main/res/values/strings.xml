@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Catch The Ball</string>
+    <string name="app_sub_name">(Basic Android Game using Java)</string>
+</resources>
