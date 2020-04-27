@@ -1,7 +1,7 @@
 package com.lacolinares.catchtheball.room;
 
-import android.arch.persistence.room.Database;
-import android.arch.persistence.room.RoomDatabase;
+import androidx.room.Database;
+import androidx.room.RoomDatabase;
 
 import com.lacolinares.catchtheball.util.AppConstants;
 
@@ -10,7 +10,7 @@ import com.lacolinares.catchtheball.util.AppConstants;
  */
 
 
-@Database(entities = TblScores.class, version = AppConstants.DB_VER)
+@Database(entities = TblScores.class, version = AppConstants.DB_VER, exportSchema = false)
 public abstract class ScoreDatabase extends RoomDatabase {
 
     public abstract ScoreDao getScoreDao();

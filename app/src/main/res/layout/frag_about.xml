@@ -108,7 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="10dp"
-            android:text="www.lacolinares.tk"
+            android:text="www.lacolinares.com"
             android:textColor="@color/colorWhite"
             android:textSize="16sp"
             android:textStyle="italic" />

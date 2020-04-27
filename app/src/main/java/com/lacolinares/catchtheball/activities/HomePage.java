@@ -3,17 +3,12 @@ package com.lacolinares.catchtheball.activities;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -24,14 +19,15 @@ import com.lacolinares.catchtheball.fragments.Frag_scores;
 import com.lacolinares.catchtheball.slidingrootnav_menu.DrawerAdapter;
 import com.lacolinares.catchtheball.slidingrootnav_menu.DrawerItem;
 import com.lacolinares.catchtheball.slidingrootnav_menu.SimpleItem;
-import com.lacolinares.catchtheball.slidingrootnav_menu.SpaceItem;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
 import java.util.Arrays;
-import java.util.Timer;
-import java.util.TimerTask;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -60,7 +56,7 @@ public class HomePage extends AppCompatActivity implements DrawerAdapter.OnItemS
         mContext = this;
 
         //NAVIGATION
-        slidingRootNav = new SlidingRootNavBuilder(this)
+        slidingRootNav = new SlidingRootNavBuilder(HomePage.this)
                 .withToolbarMenuToggle(mToolbar)
                 .withMenuOpened(false)
                 .withContentClickableWhenMenuOpened(true)

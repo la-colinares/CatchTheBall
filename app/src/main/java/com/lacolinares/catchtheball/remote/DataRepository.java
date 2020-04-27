@@ -1,6 +1,6 @@
 package com.lacolinares.catchtheball.remote;
 
-import android.arch.persistence.room.Room;
+import androidx.room.Room;
 import android.content.Context;
 
 import com.lacolinares.catchtheball.room.ScoreDatabase;
@@ -62,12 +62,7 @@ public class DataRepository {
         mScoreDatabase.getScoreDao().getScores()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<List<TblScores>>() {
-                    @Override
-                    public void accept(List<TblScores> tblScores) throws Exception {
-                        callBack.getScores(tblScores);
-                    }
-                });
+                .subscribe(callBack::getScores);
     }
 
 }

@@ -1,8 +1,8 @@
 package com.lacolinares.catchtheball.room;
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import com.lacolinares.catchtheball.util.AppConstants;
 
@@ -27,9 +27,6 @@ public class TblScores {
 
     @ColumnInfo(name = "col_date")
     public String date;
-
-    public TblScores() {
-    }
 
     public TblScores(String name, int score, String time, String date) {
         this.name = name;
